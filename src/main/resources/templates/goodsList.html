@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品列表</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-plus/dist/index.css" />
+  <!-- Import Vue 3 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@next"></script>
+  <!-- Import component library -->
+  <script src="https://cdn.jsdelivr.net/npm/element-plus"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <!-- jquery -->
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+  <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+          integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+          crossorigin="anonymous"></script>
+  <style>
+        #goodsList {
+            width: 100%;
+        }
+
+        .el-table-column {
+            width: 180px !important;
+        }
+    </style>
+</head>
+
+<body>
+<div id="goodsList">
+  <table class="table table-bordered">
+    <tr>
+      <th>商品名称</th>
+      <th>商品图片</th>
+      <th>商品原价</th>
+      <th>秒杀价</th>
+      <th>库存数量</th>
+      <th>详情</th>
+    </tr>
+    <tr v-for="good in tableData" :key="good.id">
+      <th>{{good.goodsName}}</th>
+      <th>
+        <img :src="good.goodsImg" alt="" width="150" height="150">
+      </th>
+      <th>{{good.goodsPrice}}</th>
+      <th>{{good.seckillPrice}}</th>
+      <th>{{good.goodsStock}}</th>
+      <th><a :href="'/goods/toDetail/'+good.id">详情</a></th>
+    </tr>
+  </table>
+</div>
+
+</body>
+<script>
+    const { ElMessage } = ElementPlus;
+    const fetchApi = async (url, data) => {
+        const res = await window.fetch(url, data);
+        return res.json();
+    };
+    const Table = {
+        data() {
+            return {
+                tableData: [
+
+                ],
+            }
+        },
+        created() {
+            this.getTableData();
+        },
+        methods: {
+            async getTableData() {
+                try {
+                    const res = await fetchApi("http://localhost:8088/goods/goodsList", {
+                        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+
+                    })
+                    if (res.success) {
+                        ElMessage({
+                            message: "获取商品列表成功",
+                            type: "success"
+                        })
+                        this.tableData = res.object;
+                        console.log(res.object)
+                    } else {
+                        ElMessage({
+                            message: "获取商品列表失败",
+                            type: "error"
+                        })
+                    }
+                } catch {
+                    ElMessage({
+                        message: "获取商品列表失败",
+                        type: "error"
+                    })
+                }
+
+
+            }
+        }
+    }
+    const app = Vue.createApp(Table);
+    app.use(ElementPlus);
+    app.mount('#goodsList');
+</script>
+
+</html>

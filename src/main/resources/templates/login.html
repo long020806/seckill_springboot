@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/element-plus/dist/index.css" />
+  <!-- Import Vue 3 -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@next"></script>
+  <!-- Import component library -->
+  <script src="https://cdn.jsdelivr.net/npm/element-plus"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+</head>
+
+<body>
+<div id="login">
+  <el-form ref="ruleForm" :model="ruleForm" status-icon :rules="rules" label-width="120px" class="demo-ruleForm">
+    <el-form-item label="Mobile" prop="mobile">
+      <el-input v-model.number="ruleForm.mobile"></el-input>
+    </el-form-item>
+    <el-form-item label="Password" prop="password">
+      <el-input v-model="ruleForm.password" type="password" autocomplete="off"></el-input>
+    </el-form-item>
+    <el-form-item>
+      <el-button type="primary" @click="submitForm('ruleForm')">Submit</el-button>
+    </el-form-item>
+  </el-form>
+</div>
+</body>
+<script>
+    function MD5(inputPass, salt) {
+        const str = "" + salt.charAt(0) + salt.charAt(2) + inputPass + salt.charAt(5) + salt.charAt(4);
+        return md5(str);
+    }
+    const salt = "1a2b3c4d"
+    const str = "123456";
+    const pass = MD5(str, salt);
+    const DBPass = MD5(pass, salt);
+    console.log(pass)
+    console.log(DBPass);
+</script>
+<script>
+    const {ElMessage }= ElementPlus;
+    const fetchApi = async (url, data) => {
+        const res = await window.fetch(url, data);
+        return res.json();
+    };
+    const LoginApp = {
+        data() {
+            return {
+                ruleForm: {
+                    mobile: "",
+                    password: "",
+                },
+                rules: {
+                    mobile: [{ required: true }],
+                    password: [{ required: true }]
+                }
+            }
+        },
+        methods: {
+            async login() {
+                const formData = new FormData();
+                const { mobile, password } = this.ruleForm;
+                formData.append("mobile", mobile);
+                formData.append("password", MD5(password,salt));
+                const res = await fetchApi("http://localhost:8088/login/doLogin", {
+                    body: formData,
+                    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                })
+                if(!res.success){
+                    ElMessage({
+                        message:res.message,
+                        type:"error"
+                    });
+
+                }else{
+                    ElMessage({
+                        message:"登陆成功",
+                        type:"success"
+                    })
+                    window.location.href = "/goods/toList"
+                }
+                console.log(res)
+            }, submitForm(formName) {
+                this.$refs[formName].validate((valid) => {
+                    if (valid) {
+                        this.login();
+                    } else {
+                        console.log('error submit!!')
+                        return false
+                    }
+                })
+            }
+        }
+    }
+    const app = Vue.createApp(LoginApp)
+    app.use(ElementPlus);
+    app.mount('#login');
+
+</script>
+
+
+</html>
