@@ -24,7 +24,11 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="3e5dac26-f5d6-4cc9-928b-55dcef333b40">
+        <schema name="seckill" object-types="table, view, procedure, function, constraint, index, column, dataset trigger" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3e5dac26-f5d6-4cc9-928b-55dcef333b40">
@@ -42,6 +46,11 @@
       <filter id="d85d94ab-d025-4e05-9da1-fa07a6d76afd" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
       <filter id="232c1544-0647-44e0-b71e-a38b77f61d4e" name="id" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="=" value="id" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="3e5dac26-f5d6-4cc9-928b-55dcef333b40" dataset="seckill.t_user" active-filter-id="EMPTY_FILTER">
+      <filter id="04b17921-c6d4-44cd-bd71-00e6753ceeec" name="*" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="*" active="true" />
       </filter>
     </filter-actions>
     <filter-actions connection-id="3e5dac26-f5d6-4cc9-928b-55dcef333b40" dataset="seckill.t_seckill_goods" active-filter-id="ec491e55-9812-44ec-b72d-34aeb74141e1">

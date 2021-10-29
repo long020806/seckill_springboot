@@ -57,7 +57,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         // httpServletRequest.getSession().setAttribute(ticket,user);
         redisTemplate.opsForValue().set("user:"+ticket,user);
         CookieUtil.setCookie(httpServletRequest,httpServletResponse,"userTicket",ticket);
-        return RespBean.success();
+        return RespBean.success(ticket);
     }
 
     @Override
