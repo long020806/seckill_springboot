@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93e584af-4a66-44b5-bcbe-1d2e64909715" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/utils/UserUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/vo/DetailVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/goodsDetail.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/GoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/SeckillOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/SeckillOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/IUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/vo/RespBeanEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/vo/RespBeanEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goodsList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goodsList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/GoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/SeckillOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/SeckillOrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/service/IUserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/orderDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/orderDetail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/vo/RespBeanEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/vo/RespBeanEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/goodsList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/goodsList.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +70,7 @@
       <recent name="E:\seckill_springboot\src\main\java\com\study\seckill\pojo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.UserUtil">
+  <component name="RunManager" selected="Application.SecKillMain">
     <configuration name="MD5Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.study.seckill.utils.MD5Util" />
       <module name="seckill_springboot" />
@@ -104,8 +112,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.UserUtil" />
         <item itemvalue="Application.SecKillMain" />
+        <item itemvalue="Application.UserUtil" />
         <item itemvalue="Application.MD5Util" />
       </list>
     </recent_temporary>

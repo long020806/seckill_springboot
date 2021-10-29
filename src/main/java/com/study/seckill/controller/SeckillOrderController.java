@@ -15,6 +15,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Date;
+
 /**
  * <p>
  *  前端控制器
@@ -44,6 +46,15 @@ public class SeckillOrderController {
         if(user == null) return "login";
         model.addAttribute("user",user);
         GoodsVo goods = iGoodsService.findGoodsByGoodsId(goodsId);
+        Date nowDate = new Date();
+        // if(nowDate.before(goods.getStartDate())){
+        //     model.addAttribute("errMsg",RespBeanEnum.TIME_BEFORE);
+        //     return "secKillFail";
+        // }
+        // if(nowDate.after(goods.getEndDate())){
+        //     model.addAttribute("errMsg",RespBeanEnum.TIME_AFTER);
+        //     return "secKillFail";
+        // }
         if(goods.getStockCount()<1){
             model.addAttribute("errMsg", RespBeanEnum.EMPTY_STOCK.getMessage());
             return "secKillFail";

@@ -15,9 +15,13 @@ public enum RespBeanEnum {
     LOGIN_ERROR(500210,"用户名或密码不正确"),
     MOBILE_ERROR(500211,"手机号码格式错误"),
     BIND_ERROR(500212,"参数校验错误"),
+    MOBILE_NOT_EXIST(500213,"手机号码不存在"),
+    PASSWORD_UPDATE_FAIL(500214,"更新密码失败"),
     //秒杀模块5005xx
     EMPTY_STOCK(500500,"库存不足"),
-    REPEAT_ERROR(500501,"该商品没人限购一件")
+    REPEAT_ERROR(500501,"该商品没人限购一件"),
+    TIME_BEFORE(500502,"秒杀还未开始"),
+    TIME_AFTER(500503,"秒杀已结束")
     ;
     private final Integer code;
     private final String message;
