@@ -24,11 +24,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="3e5dac26-f5d6-4cc9-928b-55dcef333b40">
-        <schema name="seckill" object-types="table, view, procedure, function, column" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3e5dac26-f5d6-4cc9-928b-55dcef333b40">
