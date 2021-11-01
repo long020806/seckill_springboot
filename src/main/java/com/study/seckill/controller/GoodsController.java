@@ -6,6 +6,7 @@ import com.study.seckill.service.IUserService;
 import com.study.seckill.vo.DetailVo;
 import com.study.seckill.vo.GoodsVo;
 import com.study.seckill.vo.RespBean;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -32,6 +33,7 @@ import java.util.concurrent.TimeUnit;
  * @date 2021/10/26 15:11
  **/
 @Controller
+@Slf4j
 @RequestMapping("goods")
 public class GoodsController {
     @Autowired
@@ -89,7 +91,7 @@ public class GoodsController {
         success.setObject(iGoodsService.findGoodsVo());
         return success;
     }
-    @RequestMapping(value = "/toDetail/{goodsId}",produces = "text/html;charset=utf-8")
+    @RequestMapping(value = "/toDetail/{goodsId}")
     @ResponseBody
     public RespBean toDetail(Model model, User user,@PathVariable("goodsId") Long goodsId,HttpServletRequest request,HttpServletResponse response){
         // ValueOperations valueOperations = redisTemplate.opsForValue();
@@ -140,7 +142,8 @@ public class GoodsController {
         detailVo.setGoodsVo(goodsVo);
         detailVo.setSecKillStatus(secKillStatus);
         detailVo.setRemainSeconds(remainSeconds);
-        return RespBean.success(detailVo);
+        RespBean result = RespBean.success(detailVo);
+        return result;
     }
 
 }

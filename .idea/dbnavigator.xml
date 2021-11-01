@@ -58,6 +58,7 @@
         <condition column="id" operator="=" value="1" active="true" />
       </filter>
     </filter-actions>
+    <filter-actions connection-id="3e5dac26-f5d6-4cc9-928b-55dcef333b40" dataset="seckill.t_order" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

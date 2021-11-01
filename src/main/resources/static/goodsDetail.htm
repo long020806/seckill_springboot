@@ -45,12 +45,16 @@ id="countDown"
                 <span id="seckillTip"></span>
             </td>
             <td>
-                <form id="seckillForm" method="post"
-                      action="/seckill/doSeckill">
-                    <button class="btn btn-primary btn-block" type="submit"
-                            id="buyButton">立即秒杀</button>
-                    <input type="hidden" name="goodsId" id="goodsId"/>
-                </form>
+<!--                <form id="seckillForm" method="post"-->
+<!--                      action="/seckill/doSeckill">-->
+<!--                    <button class="btn btn-primary btn-block" type="submit"-->
+<!--                            id="buyButton">立即秒杀</button>-->
+<!--                    <input type="hidden" name="goodsId" id="goodsId"/>-->
+<!--                </form>-->
+                <button class="btn btn-primary btn-block" type="button" id="buyButton"
+                        onclick="doSeckill()">立即秒杀
+                </button>
+                <input type="hidden" name="goodsId" id="goodsId"/>
             </td>
         </tr>
         <tr>
@@ -74,6 +78,26 @@ id="countDown"
             getDetails();
        }
    );
+    function doSeckill() {
+        $.ajax({
+            url: "/seckill/doSeckill",
+            type: "POST",
+            data: {
+                goodsId: $("#goodsId").val(),
+           },
+            success: function (data) {
+                if (data.code == 200) {
+                    window.location.href = "/orderDetail.htm?orderId=" +
+data.object.id;
+               } else {
+                    layer.msg(data.message);
+               }
+           },
+            error: function () {
+                layer.msg("客户端请求错误");
+           }
+       })
+   }
     function getDetails() {
         var goodsId = g_getQueryString("goodsId");
         $.ajax({
@@ -81,7 +105,7 @@ id="countDown"
             type: "GET",
             success: function (data) {
                 if (data.code == 200) {
-                    render(data.obj);
+                    render(data.object);
                } else {
                     layer.msg(data.message);
                }
