@@ -4,47 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93e584af-4a66-44b5-bcbe-1d2e64909715" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/AccessLimietInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/AccessLimit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/RabbitMQConfigDirect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/RabbitMQConfigFanout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/RabbitMQConfigHeader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/RabbitMQConfigTopic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/UserContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/pojo/SeckillMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/rabbitmq/MqReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/rabbitmq/MqSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/utils/JSONUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/lock.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/stock.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/study/seckill/SeckillDemoApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/UserArgumentResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/UserArgumentResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/SeckillOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/SeckillOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/IOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/IOrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/ISeckillOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/ISeckillOrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/impl/SeckillOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/impl/SeckillOrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/utils/UserUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/utils/UserUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/vo/RespBeanEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/vo/RespBeanEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/goodsDetail.htm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/goodsDetail.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/config/RedisConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/OrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/SeckillOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/SeckillOrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/service/IOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/service/IOrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/service/ISeckillOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/service/ISeckillOrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/service/impl/OrderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/service/impl/SeckillOrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/service/impl/SeckillOrderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/utils/UserUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/utils/UserUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/vo/RespBeanEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/vo/RespBeanEnum.class" afterDir="false" />
-    </list>
+    <list default="true" id="93e584af-4a66-44b5-bcbe-1d2e64909715" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
