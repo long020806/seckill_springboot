@@ -26,13 +26,13 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="3e5dac26-f5d6-4cc9-928b-55dcef333b40">
-        <schema name="seckill" object-types="table, view, procedure, function, constraint, index, column, dataset trigger" />
+        <schema name="seckill" object-types="table, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3e5dac26-f5d6-4cc9-928b-55dcef333b40">
-      <console name="Connection" type="STANDARD" schema="" session="Main"><![CDATA[select * from t_order;]]></console>
+      <console name="Connection" type="STANDARD" schema="" session="Main"><![CDATA[select * from t_seckill_goods;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

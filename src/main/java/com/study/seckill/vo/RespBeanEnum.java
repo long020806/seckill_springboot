@@ -23,6 +23,8 @@ public enum RespBeanEnum {
     REPEAT_ERROR(500501,"该商品没人限购一件"),
     TIME_BEFORE(500502,"秒杀还未开始"),
     TIME_AFTER(500503,"秒杀已结束"),
+    REQUEST_ILLEGAL(500504,"请求非法，请重新尝试"),
+    ACCESS_LIMIT_REHEAD(500505,"访问繁忙，请稍后再试"),
     //订单模块
     ORDER_NOT_EXIST(500300,"订单不存在")
     ;

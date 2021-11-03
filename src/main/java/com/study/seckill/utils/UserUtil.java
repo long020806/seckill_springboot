@@ -28,7 +28,7 @@ public class UserUtil {
         List<User> users = new ArrayList<>();
         for (int i = 0; i < count; i++) {
             User user = new User();
-            user.setId(13000000000L+i);
+            user.setId(14000000000L+i);
             user.setNickname("user"+i);
             user.setSalt("1a2b3c4d");
             user.setPassword(MD5Util.inputPassTODBPass("123456",user.getSalt()));
@@ -110,6 +110,6 @@ public class UserUtil {
     }
 
     public static void main(String[] args) throws Exception {
-        createUser(2);
+        createUser(10);
     }
 }

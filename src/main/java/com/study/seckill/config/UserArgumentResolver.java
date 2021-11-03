@@ -34,13 +34,15 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
 
     @Override
     public Object resolveArgument(MethodParameter methodParameter, ModelAndViewContainer modelAndViewContainer, NativeWebRequest nativeWebRequest, WebDataBinderFactory webDataBinderFactory) throws Exception {
-        HttpServletRequest nativeRequest = nativeWebRequest.getNativeRequest(HttpServletRequest.class);
-        HttpServletResponse nativeResponse = nativeWebRequest.getNativeResponse(HttpServletResponse.class);
-        String userTicket = CookieUtil.getCookieValue(nativeRequest, "userTicket");
-        if(StringUtils.isEmpty(userTicket)){
-            return null;
-        }
-        User user = iUserService.getUserByCookie(userTicket, nativeRequest, nativeResponse);
-        return user;
+        //此处为参数解析式获取对象并将对象放置到参数中 ， 现在改为拦截器和ThreadLocal做用户存储
+        // HttpServletRequest nativeRequest = nativeWebRequest.getNativeRequest(HttpServletRequest.class);
+        // HttpServletResponse nativeResponse = nativeWebRequest.getNativeResponse(HttpServletResponse.class);
+        // String userTicket = CookieUtil.getCookieValue(nativeRequest, "userTicket");
+        // if(StringUtils.isEmpty(userTicket)){
+        //     return null;
+        // }
+        // User user = iUserService.getUserByCookie(userTicket, nativeRequest, nativeResponse);
+        // return user;
+        return UserContext.getUser();
     }
 }

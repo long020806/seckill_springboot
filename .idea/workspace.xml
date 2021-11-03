@@ -5,22 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93e584af-4a66-44b5-bcbe-1d2e64909715" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/vo/OrderDetailVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/orderDetail.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/GoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/AccessLimietInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/AccessLimit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/RabbitMQConfigDirect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/RabbitMQConfigFanout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/RabbitMQConfigHeader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/RabbitMQConfigTopic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/UserContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/pojo/SeckillMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/rabbitmq/MqReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/rabbitmq/MqSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/utils/JSONUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/lock.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/stock.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/study/seckill/SeckillDemoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/UserArgumentResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/UserArgumentResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/SeckillOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/SeckillOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/IOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/IOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/ISeckillOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/ISeckillOrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/impl/SeckillOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/service/impl/SeckillOrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/utils/UserUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/utils/UserUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/seckill/vo/RespBeanEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/seckill/vo/RespBeanEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/goodsDetail.htm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/goodsDetail.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/goodsList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/goodsList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/GoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/config/RedisConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/OrderController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/SeckillOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/SeckillOrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/service/IOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/service/IOrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/service/ISeckillOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/service/ISeckillOrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/service/impl/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/service/impl/SeckillOrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/service/impl/SeckillOrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/utils/UserUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/utils/UserUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/study/seckill/vo/RespBeanEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/seckill/vo/RespBeanEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/goodsList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/goodsList.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,14 +53,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="AnnotationType" />
         <option value="HTML File" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -112,9 +143,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SeckillDemoApplicationTests.testLock01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seckill_springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.seckill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.study.seckill" />
+      <option name="MAIN_CLASS_NAME" value="com.study.seckill.SeckillDemoApplicationTests" />
+      <option name="METHOD_NAME" value="testLock01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeckillDemoApplicationTests.testLock02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seckill_springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.seckill.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.study.seckill" />
+      <option name="MAIN_CLASS_NAME" value="com.study.seckill.SeckillDemoApplicationTests" />
+      <option name="METHOD_NAME" value="testLock02" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.SecKillMain" />
+        <item itemvalue="JUnit.SeckillDemoApplicationTests.testLock02" />
+        <item itemvalue="JUnit.SeckillDemoApplicationTests.testLock01" />
         <item itemvalue="Application.UserUtil" />
         <item itemvalue="Application.MD5Util" />
       </list>

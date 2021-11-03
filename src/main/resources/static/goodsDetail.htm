@@ -52,7 +52,7 @@ id="countDown"
 <!--                    <input type="hidden" name="goodsId" id="goodsId"/>-->
 <!--                </form>-->
                 <button class="btn btn-primary btn-block" type="button" id="buyButton"
-                        onclick="doSeckill()">立即秒杀
+                        onclick="getSeckillPath()">立即秒杀
                 </button>
                 <input type="hidden" name="goodsId" id="goodsId"/>
             </td>
@@ -78,17 +78,40 @@ id="countDown"
             getDetails();
        }
    );
-    function doSeckill() {
+   function getSeckillPath(){
+        var goodsId = $("#goodsId").val();
+        g_showLoading();
         $.ajax({
-            url: "/seckill/doSeckill",
+            url:"/seckill/path",
+            type:"GET",
+            data:{
+                goodsId:goodsId,
+            },
+            success:function(data){
+                if(data.code==200){
+                    var path = data.object;
+                    doSeckill(path);
+                }else{
+                    layer.msg(data.message);
+                }
+            },
+            error:function(){
+                layer.msg("客户端请求错误");
+            }
+        })
+   }
+
+    function doSeckill(path) {
+        $.ajax({
+            url: "/seckill/"+path+"/doSeckill",
             type: "POST",
             data: {
-                goodsId: $("#goodsId").val(),
+                goodsId: $("#goodsId").val()
            },
             success: function (data) {
                 if (data.code == 200) {
-                    window.location.href = "/orderDetail.htm?orderId=" +
-data.object.id;
+                    //window.location.href = "/orderDetail.htm?orderId=" + data.object.id;
+                    getResult($("#goodsId").val());
                } else {
                     layer.msg(data.message);
                }
@@ -97,6 +120,41 @@ data.object.id;
                 layer.msg("客户端请求错误");
            }
        })
+   }
+   function getResult(goodsId){
+        g_showLoading();
+        $.ajax({
+            url:"/seckill/result",
+            type:"GET",
+            data:{
+                goodsId:goodsId
+            },
+            success:function(data){
+                if(data.code==200){
+                    var result = data.object;
+                    if(result<0){
+                        layer.msg("秒杀失败");
+                    }else if(result==0){
+                        setTimeout(function(){
+                            getResult(goodsId);
+                        },50)
+                    }else{
+                        layer.confirm("秒杀成功，是否查看订单",{btn:["确定","取消"]},
+                            function(){
+                                window.location.href="/orderDetail.htm?orderId="+result;
+                            },
+                            function(){
+                                layer.close();
+                            }
+                        );
+                    }
+                }
+            },
+            error:function(){
+                layer.msg("客户端请求错误")
+            }
+
+        })
    }
     function getDetails() {
         var goodsId = g_getQueryString("goodsId");
